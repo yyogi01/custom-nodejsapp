@@ -11,7 +11,9 @@ pipeline{
 		stage('Build') {
 
 			steps {
+				docker(Docker-latest) {
 				sh 'docker build -t yyogi/nodeapp:latest .'
+				}
 			}
 		}
 
